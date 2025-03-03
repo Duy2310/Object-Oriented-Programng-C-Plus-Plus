@@ -1,5 +1,4 @@
 #include "Pet.h"
-#include <iostream>
 
 // Default constructor
 Pet::Pet() {
