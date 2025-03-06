@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string>
-
 #ifndef RPG_H
 #define RPG_H
 
@@ -35,6 +32,6 @@ class RPG {
     int defense;
     string type;
     string skill[SKILL_SIZE];
-
+    
 }; 
 #endif
