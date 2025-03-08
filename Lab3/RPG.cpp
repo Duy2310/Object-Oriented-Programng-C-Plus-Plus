@@ -1,5 +1,6 @@
 #include "RPG.h"
 #include <string>
+#include <iostream>
 
 // Default Constructor
 RPG::RPG () {
