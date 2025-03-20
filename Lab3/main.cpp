@@ -40,4 +40,11 @@ int main() {
     cout << "Henry's new health: " << Mage.getHealth() << endl;
     cout << "Alive: " << (Mage.isAlive() ? "YES" : "NO") << endl;
 
+    RPG p1 = RPG("Wiz", 70, 45, 15, "Mage");
+    RPG p2 = RPG();
+
+    gameLoop(&p1, &p2);
+    displayStat(p1, p2);
+
+    return 0;
 }
