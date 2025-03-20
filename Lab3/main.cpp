@@ -5,14 +5,14 @@
 using namespace std;
 
 void displayStats(RPG player1, RPG player2){
-    cout << player1.getName() << ": "<< player1.getHealth() << " "
-         << player2.getName() << ": "<< player2.getHealth() << "\n" << "\n"; 
+    cout << player1.getName() << "health: "<< player1.getHealth() << " "
+         << player2.getName() << " health: "<< player2.getHealth() << "\n" << "\n"; 
 }
 void gameLoop(RPG* player1, RPG* player2) {
     while (player1->isAlive() && player2->isAlive()) {
-        displayStats(*player1, *player2);
 
         // Player 1's turn
+        displayStats(*player1, *player2);
         cout << player1->getName() << "'s turn\n" << endl;
         player1->useSkill(player2);
         cout << "----------------------------------------\n";
