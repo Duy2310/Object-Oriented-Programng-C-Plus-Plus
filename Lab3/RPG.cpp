@@ -6,7 +6,7 @@ RPG::RPG () {
     name = "NPC";
     health = 100;
     strength = 50;
-    defense = 50;
+    defense = 40;
     type = "warrior";
     skills[0]= "slash";
     skills[1]= "parry"; 
@@ -72,7 +72,13 @@ bool RPG::isAlive() const {
 }
 void RPG::attack(RPG* opponent) {
     int damage = strength - opponent->defense;
-    int new_health = opponent->health - damage;
+    int new_health = 0;
+    if (damage <= 0){
+        new_health = opponent->health - 0;
+    }
+    else{
+        new_health = opponent->health - damage;
+    }
     opponent->updateHealth(new_health);
 }
 void RPG::useSkill(RPG* opponent){

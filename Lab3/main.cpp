@@ -5,7 +5,7 @@
 using namespace std;
 
 void displayStats(RPG player1, RPG player2){
-    cout << player1.getName() << "health: "<< player1.getHealth() << " "
+    cout << player1.getName() << " health: "<< player1.getHealth() << " "
          << player2.getName() << " health: "<< player2.getHealth() << "\n" << "\n"; 
 }
 void gameLoop(RPG* player1, RPG* player2) {
@@ -38,7 +38,7 @@ void displayEnd(RPG player1, RPG player2) {
 
 int main() {
     
-    RPG p1 = RPG("Wiz", 70, 45, 15, "Mage");
+    RPG p1 = RPG("Wiz", 70, 50, 15, "Mage");
     RPG p2 = RPG();
 
     gameLoop(&p1, &p2);
